@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button, Image} from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import {Platform, StyleSheet} from 'react-native';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 import Home from './src/Home';
-import Interna from './src/Interna';
+import Contato from './src/Contato';
 
-const Navegador = createStackNavigator({
+// Criando as rotas para o app
+const Navegador = createDrawerNavigator({
   Home: {
     screen: Home
   },
-  Interna: {
-    screen: Interna
+  Contato: {
+    screen: Contato
   }
 },{
 
   initialRouteName: 'Home',
+
   
 });
 

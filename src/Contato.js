@@ -4,27 +4,27 @@ import {Text, View, StyleSheet, Button, Image} from 'react-native';
 export default class Home extends Component{
 
   static navigationOptions = {
-    drawerLabel: 'Home',
+    drawerLabel: 'Contato',
     drawerIcon: ({tintColor}) => (
-      <Image  source={require('./img/home_ativo.png')}
+      <Image  source={require('./img/contato_ativo.png')}
               style={[{width: 30, height: 30}, {tintColor: tintColor}]}
       />
     )
-
 
   }
 
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.titulo}>Pagina Home!</Text> 
+        <Text style={styles.titulo}>Pagina Contato!</Text> 
 
-        <Button onPress={()=> this.props.navigation.navigate('Contato')} 
-                title="Ir para Contato"/>
+        <Button onPress={()=> this.props.navigation.navigate('Home')} 
+                title="Ir para Home"/>
 
         {/* Abre e fecha  Drawer */}
         <Button onPress={()=> this.props.navigation.toggleDrawer()} 
-                title="Abrir"/>               
+                title="Abrir"/>                  
+
       </View>
     );
   }
